@@ -16,3 +16,4 @@ var server = http.createServer(function(req,res){
 
 server.listen(3000);
 console.log('escutando a porta 3000');
+
