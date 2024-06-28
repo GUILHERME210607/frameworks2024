@@ -2,44 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+
+    <%-include ("../elementos/head")%>
     <title>Inclusão de Notícias</title>
 </head>
 
 <body>
-
     <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
-        <p class="text-center">Portal Para inclusão de notícias</p>
+        <%-include ("../elementos/menu") %>
     </div>
-
     <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
-        Bem vindo ao gerenciador de inclusão de notícias
-        <%  if (!locals.cadok){%>
+        <p class="text-center">Formulário de Adicionar Noticias</p>
         <form action="formulario_inclusao_noticias" method="post">
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Título Notícia</label>
-                <input type="text" class="form-control" name="titulo" id="exampleFormControlInput1">
-            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Titulo Noticia</label>
+                <input type="text" class="form-control" id="titulo" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="noticia" class="form-label">Informe a noticia</label>
+                <textarea class="form-control" id="noticia" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+              </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Informe a notícia</label>
-                <textarea class="form-control" name="noticia" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="form-group my-2">
-                <input class="btn btn-primary" type="submit" value="cadastrar"></input>
-            </div>
-        </form>
-        <%}else{%>
-            <p>Cadastro realizado</p>
-       <% }%>
+        </form>   
     </div>
-    <div id="rodape">
-        <img src="img/rodape.png"/> 
-    </div>
-    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    
+    
+    <%-include ("../elementos/footer") %>
+  
 </body>
 
 </html>
