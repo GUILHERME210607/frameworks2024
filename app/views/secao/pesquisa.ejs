@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <%-include ("../elementos/head")%>
-    <title>Inclusão de Notícias</title>
+    <%- include ("../elementos/head") %>    
 </head>
 
 <body>
-    <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
-        <%-include ("../elementos/menu") %>
+    <div class="container bg-primary-subtle rounded border border-info mx-auto m-2">
+        <%- include ("../elementos/menu") %>
     </div>
     <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
-        <p class="text-center">Página de Pesquisa</p>
-    
+        Bem vindo as Notícias de Pesquisas
     </div>
-    
-    <%-include ("../elementos/footer") %>
+    <div id="rodape">
+        <img src="img/rodape.png"/> 
+    </div>
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
