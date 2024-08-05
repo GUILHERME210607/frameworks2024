@@ -22,7 +22,7 @@
                     <th scope="col">Data e Hora da Criação</th>
                 </tr>
             </thead>
-            <tbody>
+            <body>
                 <% for (var i=0 ;i<noticias.length;i++) {%>
                     <tr>
                         <th scope="row" class="text-center">
@@ -35,11 +35,11 @@
                             <%=noticias[i].noticia%>
                         </td>
                         <td>
-                            <%=noticias[i].dhnoticia.toUTCString()%>
+                            <%=noticias[i].dhnoticia%>
                         </td>
                     </tr>
-                    <% }%>
-            </tbody>
+                <% }%>
+            </body>
         </table>
     </div>
     <div id="rodape">
